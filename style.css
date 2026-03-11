@@ -1,0 +1,316 @@
+/* ---------------------------------------
+   RESET
+---------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #0d0d0f;
+    color: #fff;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+    background: #f5f5f5;
+    color: #111;
+}
+
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* ---------------------------------------
+   HEADER
+---------------------------------------- */
+header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    width: 60px;   /* Taille idéale */
+    height: 60px;
+    border-radius: 10px;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.8;
+    position: relative;
+    transition: 0.2s;
+}
+
+/* Hover bleu */
+nav a:hover {
+    color: #3b82f6;
+    opacity: 1;
+}
+
+/* Soulignement bleu */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #3b82f6;
+    transition: width 0.2s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+#themeToggle {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+body.light #themeToggle {
+    border-color: rgba(0,0,0,0.2);
+}
+
+/* ---------------------------------------
+   HERO
+---------------------------------------- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1 1 300px;
+}
+
+.hero-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+.hero-img {
+    width: 350px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+/* ---------------------------------------
+   BUTTON (BLEU)
+---------------------------------------- */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #3b82f6; /* Bleu moderne */
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #2563eb; /* Bleu foncé */
+    transform: translateY(-1px);
+}
+
+/* ---------------------------------------
+   ABOUT (Présentation Oliwe)
+---------------------------------------- */
+.about-home {
+    padding-top: 20px;
+}
+
+.about-home-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-home-img {
+    width: 260px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.about-home-text {
+    max-width: 600px;
+}
+
+.about-home-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.about-home-text p {
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+/* Accent bleu possible */
+.about-home-text span {
+    color: #3b82f6;
+}
+
+/* ---------------------------------------
+   FOOTER
+---------------------------------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------------
+   FORMULAIRES (pour contact.html)
+---------------------------------------- */
+input, textarea {
+    border: 1px solid rgba(59,130,246,0.4);
+    background: transparent;
+    color: inherit;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59,130,246,0.3);
+    outline: none;
+}
+
+/* ---------------------------------------
+   RESPONSIVE
+---------------------------------------- */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img {
+        width: 260px;
+    }
+
+    .about-home-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid rgba(59,130,246,0.2);
+    transition: 0.2s;
+}
+
+body.light .service-card {
+    background: #fff;
+    border-color: rgba(59,130,246,0.3);
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.process-step {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid rgba(59,130,246,0.2);
+    transition: 0.2s;
+}
+
+body.light .process-step {
+    background: #fff;
+    border-color: rgba(59,130,246,0.3);
+}
+
+.process-step:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+}
+
+.cta-final {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta-final h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
