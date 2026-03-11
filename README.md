@@ -24,3 +24,10 @@ Clonez le projet :
 
 ```bash
 git clone https://github.com/tonpseudo/oliwe-website.git
+
+📞 Contact
+Email : contact@oliwe.fr
+
+Téléphone : 07 45 31 04 32
+
+
