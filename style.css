@@ -314,3 +314,63 @@ body.light .process-step {
     font-size: 2rem;
     margin-bottom: 20px;
 }
+
+.footer {
+    background: #0d0d0d;
+    color: #e5e5e5;
+    padding: 60px 20px 30px;
+    margin-top: 100px;
+    border-top: 1px solid #1f1f1f;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin: 8px 0;
+}
+
+.footer-col ul li a {
+    color: #bfbfbf;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #3b82f6;
+}
+
+.footer-logo {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.brand h3 {
+    margin: 10px 0 5px;
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #1f1f1f;
+    font-size: 14px;
+    color: #777;
+}
