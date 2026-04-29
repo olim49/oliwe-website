@@ -7,10 +7,6 @@
 
     <link rel="icon" type="image/png" href="assets/img/favicon.png?v=2">
 
-
-    <!-- AOS animations -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -36,18 +32,18 @@
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-text" data-aos="fade-right">
+    <div class="hero-text reveal-right">
         <h2>Création de sites web & design visuel</h2>
         <p>Des solutions modernes pour développer votre activité.</p>
         <a href="contact.html" class="btn">Demander un devis</a>
     </div>
 
-    <img src="assets/mockups/mockup-phone.jpeg" alt="Mockup Oliwe" class="hero-img" data-aos="fade-left">
+    <img src="assets/mockups/mockup-phone.jpeg" alt="Mockup Oliwe" class="hero-img reveal-left">
 </section>
 
 
 <!-- PRÉSENTATION OLIWE -->
-<section class="about-home" data-aos="fade-up">
+<section class="about-home reveal-up">
     <div class="about-home-container">
 
         <img src="assets/img/about/portrait.jpeg" alt="Portrait Oliver" class="about-home-img">
@@ -116,10 +112,35 @@
 <!-- SCRIPTS -->
 <script src="script.js"></script>
 
-<!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- ScrollReveal (remplace AOS) -->
+<script src="https://unpkg.com/scrollreveal"></script>
 <script>
-    AOS.init();
+    // Effet "fade-up"
+    ScrollReveal().reveal('.reveal-up', {
+        distance: '40px',
+        origin: 'bottom',
+        duration: 800,
+        easing: 'ease-out',
+        interval: 100
+    });
+
+    // Effet "fade-right"
+    ScrollReveal().reveal('.reveal-right', {
+        distance: '40px',
+        origin: 'right',
+        duration: 800,
+        easing: 'ease-out',
+        interval: 100
+    });
+
+    // Effet "fade-left"
+    ScrollReveal().reveal('.reveal-left', {
+        distance: '40px',
+        origin: 'left',
+        duration: 800,
+        easing: 'ease-out',
+        interval: 100
+    });
 </script>
 
 <!-- GSAP (optionnel) -->
